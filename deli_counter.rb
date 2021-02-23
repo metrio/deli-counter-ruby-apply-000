@@ -1,4 +1,5 @@
 katz_deli = []
+counter = 0
 
 def line(katz_deli)
     queue = []
@@ -14,9 +15,14 @@ def line(katz_deli)
   end
 end
 
-def take_a_number(katz_deli, customer)
-    katz_deli << customer
-  puts "Welcome, #{customer}. You are number #{katz_deli.size} in line."
+# def take_a_number(katz_deli, customer)
+#     katz_deli << customer
+#   puts "Welcome, #{customer}. You are number #{katz_deli.size} in line."
+# end
+
+def take_a_number(katz_deli)
+  katz_deli << counter += 1
+  return "You're number #{katz_deli.last} in line"
 end
 
 def now_serving(katz_deli)
